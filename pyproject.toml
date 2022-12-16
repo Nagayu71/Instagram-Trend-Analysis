@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "instagram-trend-analysis"
+version = "0.1.0"
+description = ""
+authors = ["Nagayu71 <yanyongyouxi71@gmail.com>"]
+readme = "README.md"
+packages = [{include = "instagram_trend_analysis"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyterlab = "^3.5.0"
+networkx = "^2.8.7"
+numpy = "^1.23.4"
+pandas = "^1.5.1"
+scipy = "^1.9.3"
+matplotlib = "^3.6.1"
+seaborn = "^0.12.1"
+powerlaw = "^1.5"
+python-louvain = "^0.16"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
