@@ -1,0 +1,16 @@
+*.ipynb_checkpoints
+data/data_acquisition.ipynb
+*test*
+*aam.graphml*
+*mdaam.graphml*
+*B001.graphml*
+__pycache__
+*.png
+*.txt
+*.pdf
+*.npy
+*.pkl
+*.html
+*.python-version
+*.DS_Store
+.venv
