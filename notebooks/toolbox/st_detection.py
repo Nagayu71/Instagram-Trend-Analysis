@@ -78,7 +78,7 @@ class STdetection():
         
         return st005, st001, st0001, st_bf0, st_bf1
     
-    def show_ratio_ST(self, barWidth=0.925, ST_col='#b5ffb9', Normal_col='#f9bc86', anchor=(0.95, 0.95), loc='upper right', figsize=None, fname=None, *args):
+    def show_ratio_ST(self, barWidth=0.925, ST_col='#69B3A2', Normal_col='#BDDDD5', anchor=(0.95, 0.95), loc='upper right', figsize=None, fname=None, *args):
         if args:
             # the number of significant ties
             str005 = np.sum(args[0])
@@ -110,10 +110,10 @@ class STdetection():
         fig = plt.figure(figsize=figsize)
         ax = fig.add_subplot()
         names = (r'$\alpha = 0.05$',r'$\alpha = 0.01$',r'$\alpha = 0.001$','Bonferroni,\n'+r'$\alpha = 0.01$','Bonferroni,\n'+r'$\alpha = 0.001$')
-        # Create green Bars
-        ax.bar(names, STs, color=ST_col, edgecolor='white', width=barWidth, label="Significant ties")
-        # Create orange Bars
+        # Create Normal edges' Bars
         ax.bar(names, Normal, bottom=STs, color=Normal_col, edgecolor='white', width=barWidth, label="Normal edges")
+        # Create Significant ties' Bars
+        ax.bar(names, STs, color=ST_col, edgecolor='white', width=barWidth, label="Significant ties")
         # Custom x axis
         ax.set_xlabel("Significance level", fontsize = 14)
         ax.set_ylabel("Ratio of significant ties", fontsize = 14)
