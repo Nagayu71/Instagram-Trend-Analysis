@@ -80,7 +80,7 @@ def plot_dd(G, bins, color='green'):
     pass
 
 
-def plot_time_evolution(df, fname=None, ncolor="#FF7F0E", lcolor="#3399e6"):
+def plot_time_evolution(df, fname=None, ncolor="#FF7F0E", lcolor="#3399e6", linewidth=1.5):
     plt.rcParams['font.family'] = 'Arial'
     COLOR_NODE = ncolor
     COLOR_LINK = lcolor
@@ -91,19 +91,19 @@ def plot_time_evolution(df, fname=None, ncolor="#FF7F0E", lcolor="#3399e6"):
     # Instantiate a second axes that shares the same x-axis
     ax2 = ax1.twinx()
 
-    ax1.plot("tau", "N", data=df, color=COLOR_NODE, label=r"$N$"+" (left)")
-    ax2.plot("tau", "L", data=df, color=COLOR_LINK, label=r"$L$"+" (right)", linestyle='--')
+    ax1.plot("tau", "N", data=df, color=COLOR_NODE, linewidth=linewidth, label=r"$N$"+" (left)")
+    ax2.plot("tau", "L", data=df, color=COLOR_LINK, linewidth=linewidth,label=r"$L$"+" (right)", linestyle='--')
 
     h1, l1 = ax1.get_legend_handles_labels()
     h2, l2 = ax2.get_legend_handles_labels()
     ax1.legend(h1+h2, l1+l2, loc='lower right', prop={"size": 14})
 
-    ax1.set_ylabel(r"$N$", rotation="horizontal", fontsize= 18, y=0.45)
+    ax1.set_ylabel(r"$N$", rotation="horizontal", fontsize= 20, y=0.45)
     ax1.tick_params(axis="y", labelcolor=COLOR_NODE, labelsize=12)
     ax1.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
     ax1.ticklabel_format(style="sci", axis="y",scilimits=(0,0))
 
-    ax2.set_ylabel(r"$L$", rotation="horizontal", fontsize= 18)
+    ax2.set_ylabel(r"$L$", rotation="horizontal", fontsize= 20)
     ax2.tick_params(axis="y", labelcolor=COLOR_LINK, labelsize=12)
     ax2.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
     ax2.ticklabel_format(style="sci", axis="y",scilimits=(0,0))
