@@ -11,6 +11,7 @@ __pycache__
 *.npy
 *.pkl
 *.html
+*.csv
 *.python-version
 *.DS_Store
 *.graphml
