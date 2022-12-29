@@ -12,6 +12,7 @@ __pycache__
 *.pkl
 *.html
 *.csv
+*.svg
 *.python-version
 *.DS_Store
 *.graphml
