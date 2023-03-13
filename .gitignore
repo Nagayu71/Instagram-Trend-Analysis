@@ -16,4 +16,6 @@ __pycache__
 *.python-version
 *.DS_Store
 *.graphml
+*.xml
 .venv
+*.svg

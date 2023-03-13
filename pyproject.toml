@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Nagayu71 <yanyongyouxi71@gmail.com>"]
 readme = "README.md"
-packages = [{include = "instagram_trend_analysis"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
